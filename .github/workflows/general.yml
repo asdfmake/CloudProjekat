@@ -1,4 +1,4 @@
-name: Say Hello and Deploy
+name: General workflow
 
 on:
   push:
