@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "type": "module",
+  "name": "fikoli",
+  "version": "1.0.0",
+  "description": "Singidunum projekat",
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "local"
+  },
+  "author": "Filip Pavlovic",
+  "license": "ISC"
+}

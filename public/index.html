@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filip Pavlovic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Task board</h1>
+    </header>
+
+    <section>
+        <div>
+            <h2>Unesi novog korisnika</h2>
+            <form id="userForm" id="newUserForm">
+                <label for="name">Ime:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button id="newUserBtn">Dodaj korisnika</button>
+            </form>
+        </div>
+        <div>
+            <h2>Dodaj task korisniku</h2>
+            <form id="taskForm">
+                <label for="userSelect">Korisnik:</label>
+                <select id="userSelect" name="userId" required>
+                    <option value="">Nesto</option>
+                </select>
+                <label for="title">Naslov zadatka:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="description">Opis zadatka:</label>
+                <input type="text" id="description" name="description" required></input>
+                <button type="submit">Dodaj task</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="tabela"> 
+        <h2>Lista taskova</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Korisnik</th>
+                    <th>Naslov</th>
+                    <th>Opis</th>
+                    <th>Datum kreiranja</th>
+                    <th>Akcija</th>
+                </tr>
+            </thead>
+            <tbody id="taskTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
