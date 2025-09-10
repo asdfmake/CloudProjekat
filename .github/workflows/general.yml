@@ -1,0 +1,31 @@
+name: Say Hello and Deploy
+
+on:
+  push:
+    # branches:
+    #   - '*'
+    branches-ignore:
+      - vicatest
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        # This pulls your repo’s code into the GitHub runner environment.
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+        # Installs Node.js 20 in the environment so we can use npm/yarn/etc.
+
+      - name: Install Dependencies
+        run: npm install --force
+        # Runs `npm install` in the repo root — this will fail the job if dependencies are broken.
+
+      - name: Build Project
+        run: npm run build
+        # Runs the Next.js build (make sure you have a build script in your package.json)
