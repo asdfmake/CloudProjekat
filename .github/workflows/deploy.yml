@@ -33,12 +33,11 @@ jobs:
       - name: Deploy to VPS
         uses: appleboy/ssh-action@v0.1.7
         with:
-          host: 31.97.184.63
-          username: Deployer
+          host: 20.77.64.6
+          username: azureivan
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd /Deployments/cicd_test
+            cd CloudProjekat
             git fetch --all
             git reset --hard origin/deploy
-            docker compose -f ../test-compose.yml up -d --build
             date +"%Y-%m-%d %H:%M:%S" > latest_fetch
